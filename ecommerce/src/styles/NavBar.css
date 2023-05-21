@@ -1,0 +1,51 @@
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: #bc8f8f;
+    display: flex;
+    flex-direction: row;
+  }
+  .inputdiv{
+    position: relative;
+    border-radius: 20px;
+    border: none;
+    width: 450px;
+    height: 30px;
+    top:30px;
+    right:50px;
+   
+  }
+  input ::placeholder{
+    color: green;
+    text-align: center;
+  }
+  
+  .navbar .leftnav {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+  }
+  
+  .navbar .leftnav img {
+    width: 90px;
+    border-radius: 50px;
+  }
+  
+  .navbar .rightnav {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav_style{
+    text-decoration: none;
+    color:antiquewhite;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  

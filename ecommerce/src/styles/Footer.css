@@ -1,0 +1,15 @@
+.footer{
+    position: relative;
+    top:600px;
+    width: 100%;
+    /* height: 500px; */
+    background-color: #bc8f8f;
+    color:antiquewhite;
+}
+.alinks{
+    text-decoration: none;
+    color:antiquewhite;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}

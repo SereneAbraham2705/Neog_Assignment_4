@@ -1,0 +1,65 @@
+.homeimg{
+    height: 600px;
+    width:450px;
+    margin: 10px;
+}
+.textin{
+    position: absolute;
+    top:200px;
+    left: 500px;
+   
+}
+.buttonhere{
+    position: absolute;
+    top:450px;
+    left: 630px;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color:white;
+    font-size: large; 
+    font-weight: bold;
+    cursor:pointer;
+ 
+}
+button:hover{
+    background-color: #bc8f8f;
+}
+#cake{
+    position: absolute;
+    border: 1px solid transparent;
+    width:500px;
+    left:450px;
+    padding: 20px;
+    background-color:#bc8f8f;
+    border-radius: 40px;
+    box-shadow: 1px 1px 2px 2px grey;
+    
+}
+.category_list{
+    position: absolute;
+    top:129%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.catcard{
+    border: 2px solid antiquewhite;
+    border-radius: 80px;
+    background-color: antiquewhite;
+    box-shadow: 1px 1px 2px 2px grey;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    padding: 10px;
+    margin: 30px;
+   flex-direction: column;
+  
+}
+.nav{
+    text-decoration: none;
+    color: black;
+}
+.nav:hover{
+    transform: scale(1.05);
+}
