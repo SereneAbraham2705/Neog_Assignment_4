@@ -16,9 +16,9 @@ function Home() {
   return (
     <div className='home'>
         <div>
-        <img className="homeimg"src={BackImg} />
-        <img className="homeimg"src={JustImg} />
-        <img className="homeimg"src={CakeImg} />
+        <img className="homeimg"src={BackImg} alt="Someimg"/>
+        <img className="homeimg"src={JustImg} alt="Someimg"/>
+        <img className="homeimg"src={CakeImg} alt="Someimg"/>
         </div>
        <div className='homecont'>
             <h1 className='textin'>A party without cake is just a meeting

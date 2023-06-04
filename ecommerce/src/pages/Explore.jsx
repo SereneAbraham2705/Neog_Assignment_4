@@ -3,6 +3,7 @@ import { CakeContext } from '../contexts/CakeContext';
 import { CategoryContext } from '../contexts/CategoryContext';
 import CakeCard from "../components/CakeCard";
 import '../styles/Explore.css';
+import { NavLink } from 'react-router-dom';
 
 function Explore() {
 
@@ -55,17 +56,22 @@ const { category } = useContext(CategoryContext);
     setFilteredProducts(filteredProducts);
   };
 
-  const handleRatingFilterChange = (value) => {
-    setRatingFilter(value);
+  const handleRatingFilterChange = (event) => {
+   // setRatingFilter(value);
+  //  let filteredProducts = products.filter((product) => product.rating >= value);
+  //   filteredProducts = filteredProducts.filter((products) =>
+  //    categoryFilters.includes(products.categoryName)
+  //   );
+  const ratingValue = parseFloat(event.target.value);
+  setRatingFilter(ratingValue);
 
-   
-    let filteredProducts = products.filter((product) => product.rating >= value);
+  let filteredProducts = products.filter((product) => product.rating >= ratingValue);
 
-   
+  if (categoryFilters.length > 0) {
     filteredProducts = filteredProducts.filter((product) =>
       categoryFilters.includes(product.categoryName)
     );
-
+  }
    
     if (priceSort === 'lowToHigh') {
       filteredProducts.sort((a, b) => a.price - b.price);
@@ -117,12 +123,12 @@ const { category } = useContext(CategoryContext);
         <h4>Category</h4>
         {category.map((category) => (
             <div key={category._id}>
-              <label>
+              <label  className='check'>
                 <input
                   type="checkbox"
                   value={category.categoryName}
                   checked={categoryFilters.includes(category.categoryName)}
-                  onChange={handleCategoryFilterChange}
+                  onChange={handleCategoryFilterChange} 
                 />
                 {category.categoryName}
               </label>
@@ -138,21 +144,27 @@ const { category } = useContext(CategoryContext);
             max={5}
             step={0.5}
             value={ratingFilter}
-            onChange={(event) => handleRatingFilterChange(parseFloat(event.target.value))}
+            // onChange={(event) => handleRatingFilterChange(parseFloat(event.target.value))}
+            onChange={handleRatingFilterChange}
           />
-          <p>Minimum Rating: {ratingFilter}</p>
+          <p>Rating: {ratingFilter}</p>
         </div>
 
         <div className="filterItem">
           <button onClick={clearFilters}>Clear Filters</button>
         </div>
       </div>
-
+    
       <div className="menuList">
         {filteredProducts.map((item) => (
-          <CakeCard key={item._id} item={item} />
+          <NavLink to={`/explore/:{id}`} className="just">
+            <CakeCard key={item._id} item={item} />
+          </NavLink>
+          
         ))}
       </div>
+    
+      
     </div>
   );
 

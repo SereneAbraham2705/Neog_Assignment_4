@@ -21,18 +21,24 @@
     top: 0; */
     background-color: rgb(247, 240, 240);
   }
-  
+  .just{
+    text-decoration: none;
+    color:black;
+    margin-top: 1px;
+  }
   .menuList {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+   
   }
   
   .menuItem {
+    background-color: rgb(247, 240, 240);
     border-radius: 15px;
-    width: 280px;
-    height: 300px;
+    width: 290px;
+    height: 400px;
     margin: 5px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
@@ -46,12 +52,15 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width: 100%;
-    height: 200px;
+    height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+  .menuItem img{
+    width: 150px;
+    height: 150px;
+  }
   .menuItem h2,
   .menuItem p {
     margin-left: 20px;
@@ -65,7 +74,7 @@
     font-family: 'Dancing Script', cursive;
   }
   .filters {
-    margin-top: 100px;
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -82,6 +91,10 @@
   
   .filterItem {
     margin-bottom: 50px;
+    
+  }
+  .check{
+    margin-left:1px;
   }
   
   .filterItem h4 {
@@ -94,10 +107,11 @@
   .filterItem label{
     font-size: larger;
     font-weight: bold;
+    margin-right: 10px;
   }
   input[type='radio'],
   input[type='checkbox'] {
-    margin-right: 8px;
+    margin-right: 10px;
   }
   
   button {
@@ -108,11 +122,10 @@
     cursor: pointer;
     font-size: larger;
     font-family: 'Dancing Script', cursive;
-   
-  }
+}
   
   button:hover {
-    background-color: #bc8f8f;
+    background-color: white;
   }
   .footer{
     position: relative;

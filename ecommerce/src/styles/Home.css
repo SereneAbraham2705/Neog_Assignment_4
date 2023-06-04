@@ -23,7 +23,7 @@
  
 }
 button:hover{
-    background-color: #bc8f8f;
+    background-color: #bc8f8f !important;
 }
 #cake{
     position: absolute;
