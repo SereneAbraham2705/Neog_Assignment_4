@@ -6,17 +6,22 @@ import { makeServer } from "./server";
 import { BrowserRouter as Router } from "react-router-dom";
 import { CategoryContext,CategoryProvider } from "./contexts/CategoryContext";
 import { CakeContext, CakeProvider } from "./contexts/CakeContext";
+import { AuthProvider } from "./contexts/AuthContext";
 // Call make Server
 makeServer();
 export {CategoryContext};
 export {CakeContext};
+export {AuthProvider}
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <CategoryProvider>
         <CakeProvider>
-        <App />
+          <AuthProvider>
+          <App />
+          </AuthProvider>
+        
         </CakeProvider>
      
       </CategoryProvider>

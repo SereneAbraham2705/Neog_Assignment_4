@@ -32,7 +32,8 @@ function NavBar() {
                 <NavLink className="nav_style"to="/explore">Explore</NavLink>
                 <NavLink className="nav_style"to="/wishlist">WishList</NavLink>
                 <NavLink className="nav_style"to="/cart">Cart</NavLink>
-                <NavLink className="nav_style"to="/login">Login</NavLink>
+                <NavLink className="nav_style"to="/login">Login</NavLink>                
+                <NavLink className="nav_style"to="/signup">Signup</NavLink>                
                 <NavLink className="nav_style"to="/profile">Profile</NavLink>
             </nav>
         </div>
